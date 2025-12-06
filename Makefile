@@ -3,11 +3,11 @@ CFLAGS = -Wall -Wextra -O2
 
 all: xmass-tree
 
-mytool: main.o
+xmass-tree: x-mass-tree.o
 	$(CC) $(CFLAGS) -o xmass-tree main.o
 
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c
+x-mass-tree.o: x-mass-tree.c
+	$(CC) $(CFLAGS) -c x-mass-tree.c
 
 clean:
 	rm -f xmass-tree *.o

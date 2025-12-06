@@ -33,7 +33,7 @@ int main(){
     while(1){
         srand(time(NULL));
         int min = 0, max = 6;
-        number = rand() % (max - min + 1) + min;
+        int number = rand() % (max - min + 1) + min;
         printf("\x1b[2J");
         printf("\x1b[H");
         printf("%s", spaces);
@@ -42,7 +42,7 @@ int main(){
                 printf(" ");
             }
             for (int x = 0; x < y; ++x){
-                int number = rand() % (max - min + 1) + min;
+                number = rand() % (max - min + 1) + min;
 
                 if(x == lines2 && x%2 != 0){
                     printf("%s%c \e[0;0m",colors[number], light);

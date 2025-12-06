@@ -13,7 +13,7 @@ int lines5 = -8;
 int lines6 = -10;
 int lines7 = -12;
 int size = 15;
-char light = '"';
+char light = '*';
 char spaces[1000] = " ";
 
 const char* colors[] ={"\e[1;33m", "\e[0;34m", "\e[0;35m", "\e[0;36m","\e[0;31m", "\e[0;37m", "\e[0;32m"};

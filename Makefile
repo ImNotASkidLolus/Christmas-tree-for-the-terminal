@@ -5,10 +5,10 @@ BIN = xmass-tree
 
 all: $(BIN)
 
-$(BIN): x_mass_tree.o
-	$(CC) $(CFLAGS) -o $(BIN) x_mass_tree.o
+$(BIN): x-mass-tree.o
+	$(CC) $(CFLAGS) -o $(BIN) x-mass-tree.o
 
-x_mass_tree.o: x-mass-tree.c
+x-mass-tree.o: x-mass-tree.c
 	$(CC) $(CFLAGS) -c x-mass-tree.c
 
 install: $(BIN)

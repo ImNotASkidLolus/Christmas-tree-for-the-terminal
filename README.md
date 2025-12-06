@@ -13,7 +13,7 @@ cd Christmas-tree-for-the-terminal/
 
 #build the tool
 make
-sudo mv xmass-tree /usr/local/bin/
+sudo make install
 
 #run using:
 xmass-tree

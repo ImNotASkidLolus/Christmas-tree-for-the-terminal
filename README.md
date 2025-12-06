@@ -1,4 +1,4 @@
-# Christmas Tree in the Terminal
+# Christmas tree for the Terminal
 Christmas tree in C that outputs in your terminal
 <br>
 <img src="./assets/images/tree.png" alt="Tree image" width="240" height="240"/>

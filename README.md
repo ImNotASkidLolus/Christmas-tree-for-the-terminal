@@ -5,6 +5,10 @@ Christmas tree in C that outputs in your terminal
 
 ## How to make it work?
 ```
+git clone https://github.com/ImNotASkidLolus/Christmas-tree-for-the-terminal.git
+cd Christmass-tree-for-the-terminal/
+make
+sudo mv xmass-tree /usr/local/bin/
 gcc /path/to/this/file.c -o tree
 ./tree
 ```

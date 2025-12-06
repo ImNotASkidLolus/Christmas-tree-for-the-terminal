@@ -5,12 +5,18 @@ Christmas tree in C that outputs in your terminal
 
 ## How to make it work?
 ```
+#clone the repo
 git clone https://github.com/ImNotASkidLolus/Christmas-tree-for-the-terminal.git
+
+#go to the repo directory
 cd Christmass-tree-for-the-terminal/
+
+#build the tool
 make
 sudo mv xmass-tree /usr/local/bin/
-gcc /path/to/this/file.c -o tree
-./tree
+
+#run using:
+xmass-tree
 ```
 ## If you want to change the colors
 change these lines in the code by comenting the first one and uncommenting the other:

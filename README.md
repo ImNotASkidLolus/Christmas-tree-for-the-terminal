@@ -9,7 +9,7 @@ Christmas tree in C that outputs in your terminal
 git clone https://github.com/ImNotASkidLolus/Christmas-tree-for-the-terminal.git
 
 #go to the repo directory
-cd Christmass-tree-for-the-terminal/
+cd Christmas-tree-for-the-terminal/
 
 #build the tool
 make

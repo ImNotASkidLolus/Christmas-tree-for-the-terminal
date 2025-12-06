@@ -1,13 +1,18 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
 
-all: xmass-tree
+BIN = xmass-tree
 
-xmass-tree: x-mass-tree.o
-	$(CC) $(CFLAGS) -o xmass-tree x-mass-tree.o
+all: $(BIN)
 
-x-mass-tree.o: x-mass-tree.c
+$(BIN): x_mass_tree.o
+	$(CC) $(CFLAGS) -o $(BIN) x_mass_tree.o
+
+x_mass_tree.o: x-mass-tree.c
 	$(CC) $(CFLAGS) -c x-mass-tree.c
 
+install: $(BIN)
+	install -m 755 $(BIN) /usr/local/bin/$(BIN)
+
 clean:
-	rm -f xmass-tree *.o
+	rm -f $(BIN) *.o

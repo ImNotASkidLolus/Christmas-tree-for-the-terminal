@@ -13,7 +13,7 @@ int lines5 = -8;
 int lines6 = -10;
 int lines7 = -12;
 int size = 15;
-char light = '#';
+char light = '"';
 char spaces[1000] = " ";
 
 const char* colors[] ={"\e[1;33m", "\e[0;34m", "\e[0;35m", "\e[0;36m","\e[0;31m", "\e[0;37m", "\e[0;32m"};
@@ -29,10 +29,10 @@ int main(){
         strcat(spaces, " ");
 
     }
-
+    int length = sizeof(colors)/sizeof(colors[0]);
     while(1){
         srand(time(NULL));
-        int min = 0, max = 6;
+        int min = 0, max = length - 1;
         int number = rand() % (max - min + 1) + min;
         printf("\x1b[2J");
         printf("\x1b[H");
@@ -65,7 +65,7 @@ int main(){
             printf("\n");
             printf("%s", spaces);
         }
-        for(int i = 0; i < size/3; i++){
+        for(int i = 0; i < size/4; i++){
             for (int s = size/2 + 1*size/4; s >= 0; s--){
                 printf(" ");
             }

@@ -44,19 +44,19 @@ int main(){
             for (int x = 0; x < y; ++x){
                 number = rand() % (max - min + 1) + min;
 
-                if(x == lines2 && x%2 != 0){
+                if(x == lines2 && x%2 != 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines && x%2 == 0){
+                }else if(x == lines && x%2 == 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines3 && x%2 != 0){
+                }else if(x == lines3 && x%2 != 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines4 && x%2 == 0){
+                }else if(x == lines4 && x%2 == 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines5 && x%2 != 0){
+                }else if(x == lines5 && x%2 != 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines6 && x%2 == 0){
+                }else if(x == lines6 && x%2 == 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
-                }else if(x == lines7 && x%2 == 0){
+                }else if(x == lines7 && x%2 == 0 && y %2 == 0){
                     printf("%s%c \e[0;0m",colors[number], light);
                 }else{
                     printf("\e[0;32m* \e[0;0m");

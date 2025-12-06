@@ -33,7 +33,7 @@ int main(){
     while(1){
         srand(time(NULL));
         int min = 0, max = 6;
-        int number = rand() % (max - min + 1) + min;
+        number = rand() % (max - min + 1) + min;
         printf("\x1b[2J");
         printf("\x1b[H");
         printf("%s", spaces);

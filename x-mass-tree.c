@@ -44,7 +44,7 @@ int main(){
             }
             for (int x = 0; x < y; ++x){
                 number = rand() % (max - min + 1) + min;
-                if(y != random && y % 2 == 0 && x%2 == 0 || x != random && x % 3 == 0 && y % 2 == 0){
+                if((y != random && (y % 2 == 0 && x%2 == 0)) || (x != random && x % 3 == 0 && y % 2 == 0)){
                     printf("%s%c \e[0;0m",colors[number], light);
                 }else{
                     printf("\e[0;32m* \e[0;0m");
@@ -79,7 +79,7 @@ int main(){
             }
             for (int x = 0; x < y; ++x){
                 number = rand() % (max - min + 1) + min;
-                if(y != random && y % 2 == 0 && x%2 == 0 || x != random && x % 3 == 0 && y % 2 == 0){
+                if((y != random && y % 2 == 0 && x%2 == 0) || (x != random && x % 3 == 0 && y % 2 == 0)){
                     printf("%s%c \e[0;0m",colors[number], light);
                 }else{
                     printf("\e[0;32m* \e[0;0m");

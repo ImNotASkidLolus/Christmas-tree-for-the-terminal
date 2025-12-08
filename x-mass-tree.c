@@ -6,7 +6,7 @@
 #include <string.h>
 
 int size;
-char light = '*';
+char light = 'o';
 
 const char* colors[] ={"\e[1;33m", "\e[0;34m", "\e[0;35m", "\e[0;36m","\e[0;31m", "\e[0;37m", "\e[0;32m"};
 //const char* colors[] ={"\e[1;32m", "\e[0;31m", "\e[0;37m"};
@@ -60,7 +60,7 @@ int main(){
                 printf(" ");
             }
             for (int j = 0; j < size/3; j++){
-                printf("\e[0;33m* \e[0;0m");
+                printf("\e[0;31m* \e[0;0m");
             }
             printf("\n");
             printf("%s", spaces);
@@ -95,7 +95,7 @@ int main(){
                 printf(" ");
             }
             for (int j = 0; j < size/3; j++){
-                printf("\e[0;33m* \e[0;0m");
+                printf("\e[0;31m* \e[0;0m");
             }
             printf("\n");
             printf("%s", spaces);

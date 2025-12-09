@@ -14,22 +14,25 @@ int radnomForSnow;
 const char* colors[] ={"\e[1;33m", "\e[0;34m", "\e[0;35m","\e[0;31m", "\e[0;95m",};
 //const char* colors[] ={"\e[1;32m", "\e[0;31m", "\e[0;37m"};
 
-void printSpaces(){
+char* printSpaces(){
     struct winsize w;
 
     if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &w) == -1) {
         perror("ioctl");
-        return;
+        return "";
     }
+    char* spaces = malloc(500);  // pick a size you need
+    spaces[0] = '\0';  
     int random2;
     for(int i = 0; i < w.ws_col/4 + 5; i++){
         random2 = rand() %  (w.ws_col/4 + 5 + 1);
         if(i == random2){
-            printf("\e[0;37m.\e[0;0m");
+            strcat(spaces,".");
         }else{
-            printf(" ");
+            strcat(spaces, " ");
         }
-    }
+    }   
+    return spaces;
 }
 
 int main(){
@@ -47,7 +50,7 @@ int main(){
         int number = rand() % (max - min + 1) + min;
         printf("\x1b[2J");
         printf("\x1b[H");
-        printSpaces();
+        printf("\033[1;37m%s\033[0m", printSpaces());
 
         //print the tree
         for (int y = 0; y < size; y++){
@@ -84,24 +87,25 @@ int main(){
                     printf(" ");
                 }
             }
-            printSpaces();
+            printf("\033[1;37m%s\033[0m", printSpaces());
             printf("\n");
-            printSpaces();
+            printf("\033[1;37m%s\033[0m", printSpaces());
 
         }
         //print the trunk
-        printf("\e[0;31m           wwWww\e[0;0m\n");
-        printSpaces();
-        printf("\e[0;31m           wwWww\e[0;0m\n");       
-        printSpaces(); 
-        printf("\e[0;31m           wwWww\e[0;0m\n");
+        printf("\e[0;31m           wwWww\033[1;37m%s\033[0m\e[0;0m\n",printSpaces());
+        printf("\033[1;37m%s\033[0m", printSpaces());
+        printf("\e[0;31m           wwWww\033[1;37m%s\033[0m\e[0;0m\n", printSpaces());
+        printf("\033[1;37m%s\033[0m", printSpaces());       
+        printf("\e[0;31m   🎁      wwWww  🎁     🎁\033[1;37m%s\033[0m\e[0;0m\n", printSpaces());
+        printf("\033[1;37m%s\033[0m", printSpaces());
 
         printf("\n");
-        printSpaces();
+        printf("\033[1;37m%s\033[0m", printSpaces());
         printf("\e[0;31mMerry \e[0;0m\e[0;37mChristmas\e[0;0m \e[0;31mto\e[0;0m \e[0;37mevery\e[0;0m \e[1;33mCODER\e[0;0m\n");
-        printSpaces();
-        printf("    \e[0;31mWish\e[0;0m \e[0;37myou\e[0;0m \e[0;31mhappy\e[0;0m \e[0;37mcoding!\e[0;0m\n");
-
+        printf("\033[1;37m%s\033[0m", printSpaces());
+        printf("    \e[0;31mWish\e[0;0m \e[0;37myou\e[0;0m \e[0;31mhappy\e[0;0m \e[0;37mcoding!\e[0;0m");
+        printf("\033[1;37m%s\033[0m", printSpaces());
         fflush(stdout);
         usleep(10000);
     }

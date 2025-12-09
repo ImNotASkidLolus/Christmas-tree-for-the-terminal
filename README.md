@@ -1,7 +1,7 @@
 # Christmas tree for the Terminal
 Christmas tree in C that outputs in your terminal
 <br>
-<img src="./tree.gif" alt="Tree image"/>
+<img src="./tree.gif" alt="Tree image" width="300"/>
 
 ## How to make it work?
 ```

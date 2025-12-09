@@ -91,12 +91,16 @@ int main(){
         }
         //print the trunk
         printf("\e[0;31m           wwWww\e[0;0m\n");
-        printf("\e[0;31m%s               wwWww\e[0;0m\n",spaces);        
-        printf("\e[0;31m%s               wwWww\e[0;0m\n",spaces);
+        printSpaces();
+        printf("\e[0;31m           wwWww\e[0;0m\n");       
+        printSpaces(); 
+        printf("\e[0;31m           wwWww\e[0;0m\n");
 
         printf("\n");
         printSpaces();
-        printf("\e[0;31mMerry \e[0;0m\e[0;37mChristmas\e[0;0m \e[0;31mto\e[0;0m \e[0;37mevery\e[0;0m \e[1;33mCODER\e[0;0m\n %s      \e[0;31mWish\e[0;0m \e[0;37myou\e[0;0m \e[0;31mhappy\e[0;0m \e[0;37mcoding!\e[0;0m\n", spaces);
+        printf("\e[0;31mMerry \e[0;0m\e[0;37mChristmas\e[0;0m \e[0;31mto\e[0;0m \e[0;37mevery\e[0;0m \e[1;33mCODER\e[0;0m\n");
+        printSpaces();
+        printf("    \e[0;31mWish\e[0;0m \e[0;37myou\e[0;0m \e[0;31mhappy\e[0;0m \e[0;37mcoding!\e[0;0m\n");
 
         fflush(stdout);
         usleep(10000);

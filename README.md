@@ -25,3 +25,8 @@ const char* colors[] ={"\e[1;33m", "\e[0;34m", "\e[0;35m", "\e[0;36m","\e[0;31m"
 //const char* colors[] ={"\e[1;32m", "\e[0;31m", "\e[0;37m"};
 ```
 Then you will need to build it again so do this before bulding the program
+#Whenever you want to speed up the animation you can change this line:
+```C
+usleep(100000);
+//its in ms
+```
